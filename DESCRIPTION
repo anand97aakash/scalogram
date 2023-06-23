@@ -1,11 +1,21 @@
 Package: Scalogram
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Scalogram 
+Description: User-friendly way to estimate multi-scale habitat measures.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: c(person("E.M.O.", "Silveira", email = "esilveira@wisc.edu", role = c("aut")),
+	     person("Akash", "Anand", email="aanand37@wisc.edu", role = c("aut", "cre")),
+	     person("Anna", "Pidgeon", email="apidgeon@wisc.edu", role = c("aut"))
+        person("Eric", "Wood", email="ericmwood@calstatela.edu", role = c("aut")),
+        person("Ryan", "E. Buron", email="rburon@wisc.edu", role = c("aut")),
+        person("Avi", "Bar-Massada", email="avi-b@sci.haifa.ac.i", role = c("aut")),
+        person("Laura", "Farwell", email="lfarwell@wisc.edu", role = c("aut")),
+        person("Anthony", "R. Ives", email="arives@wisc.edu", role = c("aut")),
+        person("Ben", "Zuckerberg", email="bzuckerberg@wisc.edu", role = c("aut")),
+        person("Volker", "Radeloff", email="radeloff@wisc.edu", role = c("aut")))
+Maintainer: The package maintainer <aanand37@wisc.edu>
+URL: https://github.com/anand97aakash/scalogram 
+Description: None
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
