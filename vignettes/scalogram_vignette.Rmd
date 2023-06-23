@@ -1,7 +1,5 @@
 ---
 title: "Scalogram_vignette"
-author: "Authors"
-date: "2023-05-27"
 output: html_document
 ---
 
