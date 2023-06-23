@@ -6,4 +6,5 @@ The scalogram is a tool to capture the spatial aspects of habitat measures and c
 Install the latest version of this package by entering the following in R:
 
 install.packages("remotes")
+
 remotes::install_github("anand97aakash/scalogram")
