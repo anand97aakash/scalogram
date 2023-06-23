@@ -5,7 +5,7 @@ Description: User-friendly way to estimate multi-scale habitat measures.
 Version: 0.1.0
 Authors@R: c(person("E.M.O.", "Silveira", email = "esilveira@wisc.edu", role = c("aut")),
 	     person("Akash", "Anand", email="aanand37@wisc.edu", role = c("aut", "cre")),
-	     person("Anna", "Pidgeon", email="apidgeon@wisc.edu", role = c("aut"))
+	     person("Anna", "Pidgeon", email="apidgeon@wisc.edu", role = c("aut")),
         person("Eric", "Wood", email="ericmwood@calstatela.edu", role = c("aut")),
         person("Ryan", "E. Buron", email="rburon@wisc.edu", role = c("aut")),
         person("Avi", "Bar-Massada", email="avi-b@sci.haifa.ac.i", role = c("aut")),
