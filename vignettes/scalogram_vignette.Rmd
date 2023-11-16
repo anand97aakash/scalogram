@@ -1,5 +1,5 @@
 ---
-title: "Scalogram_vignette"
+title: "scalogram_vignette"
 output: html_document
 ---
 
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(raster)
 library(sf)
-library(Scalogram)
+library(scalogram)
 raster <-raster("X:\\akash\\PROJECTS\\Duda\\data\\all_data\\MOD_CumDHI_GCS.tif")
 # Load the shapefile
 shapefile_file <- "X:\\akash\\PROJECTS\\Duda\\data\\all_data\\Plots.shp"
