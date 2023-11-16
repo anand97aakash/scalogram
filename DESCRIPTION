@@ -1,6 +1,6 @@
-Package: Scalogram
+Package: scalogram
 Type: Package
-Title: Scalogram 
+Title: scalogram 
 Description: User-friendly way to estimate multi-scale habitat measures.
 Version: 0.1.0
 Authors@R: c(person("E.M.O.", "Silveira", email = "esilveira@wisc.edu", role = c("aut")),
