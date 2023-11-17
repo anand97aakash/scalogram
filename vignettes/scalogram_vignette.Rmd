@@ -13,10 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(raster)
 library(sf)
 library(scalogram)
-raster <-raster("X:\\akash\\PROJECTS\\Duda\\data\\all_data\\MOD_CumDHI_GCS.tif")
+
+raster_path <- system.file("data/MOD_CumDHI_GCS.tif", package = "scalogram")
+shp_path <- system.file("data/Plots.shp", package = "scalogram")
+
+raster <-raster(raster_path)
 # Load the shapefile
-shapefile_file <- "X:\\akash\\PROJECTS\\Duda\\data\\all_data\\Plots.shp"
-shapefile <- st_read(shapefile_file)
+shapefile <- st_read(shp_path)
 
 plot(raster)
 plot(shapefile, add = TRUE)   # shapefile[,1]
@@ -29,7 +32,7 @@ plot(shapefile, add = TRUE)   # shapefile[,1]
 ```{r}
 extent <- c(3,5,7,9,11,21,31,41,51,61,71,81,91,101)
 
-data <- scalogram.extract_by_extent("X:\\akash\\PROJECTS\\Duda\\data\\all_data\\MOD_CumDHI_GCS.tif", "X:\\akash\\PROJECTS\\Duda\\data\\all_data\\Plots.shp", extent)
+data <- scalogram.extract_by_extent(raster_path, shp_path, extent)
 
 head(data)
 ```
