@@ -12,22 +12,25 @@ scalogram.extract_by_extent <- function(raster_file, shapefile_file, x) {
   data <- raster(raster_file)
   
   # Check if raster has valid values
-  if (!hasValues(CumDHI)) {
-    stop("CumDHI raster does not have any valid values.")
+  if (!hasValues(data)) {
+    stop("data raster does not have any valid values.")
   }
   
   ###If the coordinate system of raster and shapefile is different then this code will help in matching them
   # Check current coordinate systems
   shapefile_crs <- st_crs(shapefile)
-  raster_crs <- crs(CumDHI)
+  raster_crs <- crs(data)
   
   # If CRS doesn't match, reproject the shapefile to match the raster
   if (!identical(st_crs(shapefile), raster_crs)) {
     shapefile <- st_transform(shapefile, crs = raster_crs)
   }  
   
-    # Vector of extents
-  radii <- x    
+  
+
+  # Vector of extents
+  radii <- x  # Add more radii as needed
+  
   
   #############################################################################################
   # Initialize an empty data frame to store the results
@@ -65,7 +68,7 @@ scalogram.extract_by_extent <- function(raster_file, shapefile_file, x) {
         split(square, row(square)),
         ID
       ),
-      proj4string = CRS(as.character("+proj=longlat +datum=WGS84 +no_defs"))
+      proj4string = crs(data)
     )
     
     # Extract the raster values for each polygon
