@@ -21,7 +21,7 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
   
   #############################################################################################
   # Initialize an empty data frame to store the results
-  result_df <- data.frame(ID = data$ID, Lat = data$Lat, Lon = data$Lon, stringsAsFactors = FALSE)
+  result_df <- data.frame(ID = data$id, Lat = data$lat, Lon = data$lon, stringsAsFactors = FALSE)
   
   # Extract the plot ID information
   ID <- data$ID
