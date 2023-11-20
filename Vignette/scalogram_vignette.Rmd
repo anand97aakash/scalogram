@@ -15,10 +15,13 @@ library(sf)
 library(scalogram)
 
 raster_path <- system.file("data/MOD_CumDHI_GCS.tif", package = "scalogram")
-shp_path <- system.file("data/Plots.shp", package = "scalogram")
-#csv_path <- system.file("data/Plots.csv", package = "scalogram")
-
 raster <-raster(raster_path)
+
+# Point data must have three column named (id, lat, and lon), it can be either a shapefile or a csv
+
+shp_path <- system.file("data/Plots.shp", package = "scalogram") # if you have a shapefile
+#csv_path <- system.file("data/Plots.csv", package = "scalogram") # if you have a excel sheet
+
 # Load the shapefile
 shapefile <- st_read(shp_path) # comment this line when using .csv file
 
