@@ -24,7 +24,7 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
   result_df <- data.frame(ID = data$id, Lat = data$lat, Lon = data$lon, stringsAsFactors = FALSE)
   
   # Extract the plot ID information
-  ID <- data$ID
+  ID <- data$id
   
   # Loop over each radius
   for (i in seq_along(radii)) {
@@ -54,7 +54,7 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
       split(square, row(square)),
       ID
     ),
-    proj4string = CRS(as.character("+proj=longlat +datum=WGS84 +no_defs"))
+    proj4string = crs(raster)
     )
     
     # Extract the raster values for each polygon
