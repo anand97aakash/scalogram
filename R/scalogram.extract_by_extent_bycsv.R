@@ -10,7 +10,6 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
   
   # Load the raster
   raster <- raster(raster_file)
-  
   # Check if raster has valid values
   if (!hasValues(raster)) {
     stop("Raster does not have any valid values.")
@@ -31,10 +30,10 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
     radius <- radii[i]
     
     # define the plot edges based upon the plot radius
-    yPlus <- data$Lat + radius * res(raster)[1]
-    xPlus <- data$Lon + radius * res(raster)[1]
-    yMinus <- data$Lat - radius * res(raster)[1]
-    xMinus <- data$Lon - radius * res(raster)[1]
+    yPlus <- data$lat + radius * res(raster)[1]
+    xPlus <- data$lon + radius * res(raster)[1]
+    yMinus <- data$lat - radius * res(raster)[1]
+    xMinus <- data$lon - radius * res(raster)[1]
     
     # calculate polygon coordinates for each plot centroid
     square <- cbind(
