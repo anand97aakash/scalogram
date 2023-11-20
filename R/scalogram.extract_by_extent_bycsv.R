@@ -66,7 +66,3 @@ scalogram.extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
   }
   return(data.frame(result_df))
 }
-
-# Return the results as a data frame
-return(data.frame(result_df))
-}
