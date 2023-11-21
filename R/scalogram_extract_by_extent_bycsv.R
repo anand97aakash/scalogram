@@ -2,8 +2,8 @@ scalogram_extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
   library(raster)
   library(sf)
   library(sp)
-  library(rgdal)
-  library(progress)
+  #library(rgdal)
+  #library(progress)
   
   # Load the CSV file
   data <- read.csv(csv_file)
