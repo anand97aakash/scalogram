@@ -2,8 +2,8 @@ scalogram.extract_by_extent <- function(raster_file, shapefile_file, x) {
   library(raster)
   library(sf)
   library(sp)
-  library(rgdal)
-  library(progress)
+  #library(rgdal)
+  #library(progress)
   
   # Load the shapefile
   shapefile <- st_read(shapefile_file)
