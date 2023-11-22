@@ -43,10 +43,10 @@ scalogram.extract_by_extent <- function(raster_file, shapefile_file, x) {
     radius <- radii[i]
     
     # define the plot edges based upon the plot radius
-    yPlus <- (shapefile$lat + radius*res(data)[1])/2
-    xPlus <- (shapefile$lon + radius*res(data)[1])/2
-    yMinus <- (shapefile$lat - radius*res(data)[1])/2
-    xMinus <- (shapefile$lon - radius*res(data)[1])/2
+    yPlus <- shapefile$lat + (radius*res(data)[1])/2
+    xPlus <- shapefile$lon + (radius*res(data)[1])/2
+    yMinus <- shapefile$lat - (radius*res(data)[1])/2
+    xMinus <- shapefile$lon - (radius*res(data)[1])/2
     
     # calculate polygon coordinates for each plot centroid
     square <- cbind(xMinus, yPlus,  # NW corner
