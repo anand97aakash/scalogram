@@ -30,10 +30,10 @@ scalogram_extract_by_extent_bycsv <- function(raster_file, csv_file, x) {
     radius <- radii[i]
     
     # define the plot edges based upon the plot radius
-    yPlus <- data$lat + radius * res(raster)[1]
-    xPlus <- data$lon + radius * res(raster)[1]
-    yMinus <- data$lat - radius * res(raster)[1]
-    xMinus <- data$lon - radius * res(raster)[1]
+    yPlus <- (data$lat + radius * res(raster)[1])/2
+    xPlus <- (data$lon + radius * res(raster)[1])/2
+    yMinus <- (data$lat - radius * res(raster)[1])/2
+    xMinus <- (data$lon - radius * res(raster)[1])/2
     
     # calculate polygon coordinates for each plot centroid
     square <- cbind(
